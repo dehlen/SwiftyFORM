@@ -3,7 +3,7 @@ import UIKit
 
 public class FormTableView: UITableView {
 	public init() {
-		super.init(frame: CGRect.zero, style: .grouped)
+		super.init(frame: CGRect.zero, style: .insetGrouped)
 		contentInset = UIEdgeInsets.zero
 		scrollIndicatorInsets = UIEdgeInsets.zero
 
