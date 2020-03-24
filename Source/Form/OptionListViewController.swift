@@ -18,7 +18,7 @@ class OptionListViewController: FormViewController, SelectOptionDelegate {
 
 	override func populate(_ builder: FormBuilder) {
 		if #available(iOS 13.0, *) {
-        		view.backgroundColor = .secondarySystemBackground
+        		view.backgroundColor = .systemGroupedBackground
     		} else {
     			view.backgroundColor = .white
     		}
