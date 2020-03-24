@@ -17,6 +17,11 @@ class OptionListViewController: FormViewController, SelectOptionDelegate {
 	}
 
 	override func populate(_ builder: FormBuilder) {
+		if #available(iOS 13.0, *) {
+        		view.backgroundColor = .secondarySystemBackground
+    		} else {
+    			view.backgroundColor = .white
+    		}
 		SwiftyFormLog("preselect option \(String(describing: optionField.selected?.title))")
 		builder.navigationTitle = optionField.title
 		for optionRow: OptionRowModel in optionField.options {
