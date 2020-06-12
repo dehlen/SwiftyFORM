@@ -21,6 +21,7 @@ public class TextFieldFormItem: FormItem, CustomizableLabels {
 	public var secureTextEntry = false
     public var textAlignment: NSTextAlignment = .left
     public var clearButtonMode: UITextField.ViewMode = .whileEditing
+    public var isFirstResponder: Bool = false
 
 	public var returnKeyType: UIReturnKeyType = .default
 
@@ -44,7 +45,7 @@ public class TextFieldFormItem: FormItem, CustomizableLabels {
 			self.assignValueAndSync(newValue)
 		}
 	}
-
+    
 	public typealias TextDidChangeBlock = (_ value: String) -> Void
 	public var textDidChangeBlock: TextDidChangeBlock = { (value: String) in
 		SwiftyFormLog("not overridden")

@@ -42,6 +42,7 @@ public struct TextFieldFormItemCellModel {
     var detailFont: UIFont = .preferredFont(forTextStyle: .body)
     var errorFont: UIFont = .preferredFont(forTextStyle: .caption2)
     var errorTextColor: UIColor = UIColor.red
+    var isFirstResponder: Bool = false
     
 	var model: TextFieldFormItem! = nil
 
@@ -113,6 +114,10 @@ public class TextFieldFormItemCell: UITableViewCell, AssignAppearance {
 //		textField.backgroundColor = UIColor.greenColor()
 //		errorLabel.backgroundColor = UIColor.yellowColor()
 		clipsToBounds = true
+        
+        if model.isFirstResponder {
+            textField.becomeFirstResponder()
+        }
 	}
 
 	public required init(coder aDecoder: NSCoder) {
